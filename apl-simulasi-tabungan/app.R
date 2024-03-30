@@ -465,7 +465,7 @@ ui <- page_navbar(
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-      
+
         gtag('config', 'G-XWLYNEVE4J');
       </script>
     ")
@@ -831,7 +831,7 @@ server <- function(input, output, session) {
     y <- as.character(input$sumbu_y_dep)
     warna <- as.character(input$warna_dep)
     facet <- as.character(input$facet_dep)
-    
+
     plot_awal <- tabel_data_dep() %>%
       ggplot(aes(.data[[x]], .data[[y]])) +
       theme_bw(base_size = 16) +
@@ -877,7 +877,7 @@ server <- function(input, output, session) {
           size = 5
         ) +
         facet_grid(
-          ~factor(.data[[facet]])
+          ~ factor(.data[[facet]])
         )
     } else if (warna == "Penghitungan Bunga" & facet != "-") {
       plot_awal +
@@ -889,7 +889,7 @@ server <- function(input, output, session) {
         ) +
         scale_color_viridis_d() +
         facet_grid(
-          ~factor(.data[[facet]])
+          ~ factor(.data[[facet]])
         ) +
         theme(
           legend.position = "bottom"
@@ -904,13 +904,13 @@ server <- function(input, output, session) {
         ) +
         scale_color_viridis_b() +
         facet_grid(
-          ~factor(.data[[facet]])
+          ~ factor(.data[[facet]])
         ) +
         theme(
           legend.position = "bottom"
         )
     }
-    
+
     plot_baru
   })
 
@@ -1183,7 +1183,7 @@ server <- function(input, output, session) {
     y <- as.character(input$sumbu_y)
     warna <- as.character(input$warna)
     facet <- as.character(input$facet)
-    
+
     plot_awal <- tabel_data() %>%
       ggplot(aes(.data[[x]], .data[[y]])) +
       theme_bw(base_size = 16) +
@@ -1217,7 +1217,7 @@ server <- function(input, output, session) {
           size = 5
         ) +
         facet_grid(
-          ~factor(.data[[facet]])
+          ~ factor(.data[[facet]])
         )
     } else {
       plot_awal +
@@ -1229,13 +1229,13 @@ server <- function(input, output, session) {
         ) +
         scale_color_viridis_b() +
         facet_grid(
-          ~factor(.data[[facet]])
+          ~ factor(.data[[facet]])
         ) +
         theme(
           legend.position = "bottom"
         )
     }
-    
+
     plot_baru
   })
 }

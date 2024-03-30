@@ -1,20 +1,54 @@
-#' Mengekspor aplikasi Shiny dalam folder "apl"
-#' ke folder "docs".
+# Mengekspor aplikasi Shiny ke folder "app".
 shinylive::export(
   appdir = "apl-derajat-radian",
-  destdir = "docs",
+  destdir = "app",
   subdir = "derajat-radian"
 )
 shinylive::export(
+  appdir = "apl-dist-t",
+  destdir = "app",
+  subdir = "dist-t"
+)
+shinylive::export(
+  appdir = "apl-hukum-bil-besar",
+  destdir = "app",
+  subdir = "hukum-bil-besar"
+)
+shinylive::export(
+  appdir = "apl-idn-pisa-2022",
+  destdir = "app",
+  subdir = "idn-pisa-2022"
+)
+shinylive::export(
+  appdir = "apl-lempar-undi-dadu",
+  destdir = "app",
+  subdir = "lempar-undi-dadu"
+)
+shinylive::export(
+  appdir = "apl-selang-kepercayaan",
+  destdir = "app",
+  subdir = "selang-kepercayaan"
+)
+shinylive::export(
+  appdir = "apl-simpangan-baku",
+  destdir = "app",
+  subdir = "simpangan-baku"
+)
+shinylive::export(
   appdir = "apl-simulasi-tabungan",
-  destdir = "docs",
+  destdir = "app",
   subdir = "simulasi-tabungan"
 )
 shinylive::export(
-  appdir = "apl-plotly",
-  destdir = "docs",
-  subdir = "contoh-plotly"
+  appdir = "apl-teor-lim-pusat",
+  destdir = "app",
+  subdir = "teor-lim-pusat"
+)
+shinylive::export(
+  appdir = "apl-uji-t-welch",
+  destdir = "app",
+  subdir = "uji-t-welch"
 )
 
 # Menguji aplikasi dalam folder "docs".
-httpuv::runStaticServer("docs")
+httpuv::runStaticServer("app")
