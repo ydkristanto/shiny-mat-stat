@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
+    <meta name="description" content="Aplikasi berbasis web ini menyediakan sarana bagi peserta didik untuk melakukan simulasi terhadap penghitungan deposito dan tabungan berjangka. Dengan cara seperti ini, peserta didik diharapkan dapat menemukan ide elementer dari dua permasalahan yang dianggap cukup kompleks bagi sebagian besar peserta didik tersebut.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-02-28">
+    <meta name="keywords" content="bunga majemuk, anuitas, tabungan berjangka, simpanan berjangka, tahapan berjangka, Aljabar, matematika finansial, matematika keuangan, literasi finansial, kuantitas, hubungan, R, Shiny, simulasi, kalkulator">
+    <title>Simulasi Tabungan &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <script
       src="./../shinylive/load-shinylive-sw.js"
       type="module"
@@ -19,6 +24,47 @@
       const appRoot = document.getElementById("root");
       runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWLYNEVE4J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      $(document).on('change', 'select#jenis_simulasi_dep', function(e) {
+        gtag('event', 'change', {'event_category' : 'pilih jenis simulasi deposito',
+        'event_label' : document.querySelector('select#jenis_simulasi_dep').value
+        });
+      });
+
+      $(document).on('change', 'input#periode_dep', function(e) {
+         gtag('event', 'change', {'event_category' : 'periode deposito',
+        'event_label' : document.querySelector('input#periode_dep').value
+        });
+      });
+    
+      gtag('config', 'G-XWLYNEVE4J');
+    </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Simulasi Tabungan – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/simulasi-tabungan/" />
+    <meta property="og:description" content="Bagaimana kita menghitung total tabungan jika kita rutin menabung sejumlah uang yang tetap dengan jangka waktu yang periodik?" />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/03/simulasi-tabungan.png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Cuplikan layar aplikasi untuk mensimulasikan tabungan berjangka atau anuitas." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Simulasi Tabungan – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/03/simulasi-tabungan.png" />
+    <meta name="twitter:image:alt" content="Cuplikan layar aplikasi untuk mensimulasikan tabungan berjangka atau anuitas." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../shinylive/style-resets.css" />
     <link rel="stylesheet" href="./../shinylive/shinylive.css" />
   </head>

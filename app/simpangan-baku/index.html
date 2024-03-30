@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
+    <meta name="description" content="Aplikasi interaktif ini bertujuan untuk menunjukkan mengapa rumus simpangan baku sampel menggunakan n - 1 sebagai pembaginya. Untuk mencapai tujuan tersebut, aplikasi ini mendemonstrasikan dua hal penting. Pertama, meskipun rumus simpangan baku dengan pembagi n dan n - 1 sama-sama mendekati simpangan baku populasi ketika ukuran sampelnya besar, tetapi simpangan baku sampel dengan pembagi n - 1 jauh lebih baik dibandingkan dengan pembagi n ketika sampelnya kecil. Simpangan baku sampel dengan pembagi n - 1 tidak berbeda terlalu jauh dengan simpangan baku sampel ketika rerata populasinya diketahui.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-01-24">
+    <meta name="keywords" content="Statistika, statistik, populasi, sampel, simpangan baku, standar deviasi, deviasi standar, Shiny, media pembelajaran, diagram garis, R, RStudio, tidyverse, ggplot2, dplyr">
+    <title>Simpangan Baku Sampel &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <script
       src="./../shinylive/load-shinylive-sw.js"
       type="module"
@@ -19,6 +24,26 @@
       const appRoot = document.getElementById("root");
       runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
     </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Simpangan Baku Sampel – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/simpangan-baku/" />
+    <meta property="og:description" content="Aplikasi Shiny ini mendemonstrasikan mengapa dalam rumus simpangan baku sampel pembaginya adalah n - 1." />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/simpangan-baku.png" />
+    <meta property="og:image:width" content="1218" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:alt" content="Perbandingan tren rerata simpangan baku sampel ketika ukuran sampelnya semakin besar." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Simpangan Baku Sampel – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/simpangan-baku.png" />
+    <meta name="twitter:image:alt" content="Perbandingan tren rerata simpangan baku sampel ketika ukuran sampelnya semakin besar." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../shinylive/style-resets.css" />
     <link rel="stylesheet" href="./../shinylive/shinylive.css" />
   </head>

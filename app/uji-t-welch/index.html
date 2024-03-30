@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
+    <meta name="description" content="Aplikasi interaktif ini dapat digunakan untuk membandingkan dua jenis uji t dua sampel, yaitu uji t klasik dan uji t Welch. Kedua jenis uji t tersebut memiliki perbedaan dalam hal asumsi-asumsi statistiknya. Uji t klasik mengasumsikan homogenitas variansi sedangkan uji t Welch tidak. Aplikasi ini menggunakan dua ukuran dalam membandingkan kedua uji t tersebut. Kedua ukuran tersebut adalah ketegaran dan kuasa ujinya. Ketegaran dapat dilihat pada galat jenis I. Kuasa uji dapat diselidiki ketika hipotesis nolnya salah. Hipotesis nol yang digunakan dalam aplikasi ini adalah bahwa kedua populasinya memiliki rerata yang sama.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-01-26">
+    <meta name="keywords" content="Statistika, statistik, uji t, Welch, variansi, homogenitas variansi, uji hipotesis, sampel, populasi, rerata, rata-rata, selisih rerata, distribusi sampling, Shiny, aplikasi, media pembelajaran, distribusi normal, R, RStudio, tidyverse, ggplot2, dplyr">
+    <title>Ketegaran dan Kuasa Uji t dan Welch &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <script
       src="./../shinylive/load-shinylive-sw.js"
       type="module"
@@ -19,6 +24,26 @@
       const appRoot = document.getElementById("root");
       runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
     </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ketegaran dan Kuasa Uji t dan Welch – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/uji-t-welch/" />
+    <meta property="og:description" content="Aplikasi Shiny ini dapat digunakan untuk membandingkan ketegaran dan kuasa uji t klasik dan Welch." />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/uji-t-welch.png" />
+    <meta property="og:image:width" content="1218" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:alt" content="Distribusi statistik t ketika dihitung dengan mengasumsikan homogenitas variansi dan tanpa asumsi tersebut." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Ketegaran dan Kuasa Uji t dan Welch – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/uji-t-welch.png" />
+    <meta name="twitter:image:alt" content="Distribusi statistik t ketika dihitung dengan mengasumsikan homogenitas variansi dan tanpa asumsi tersebut." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../shinylive/style-resets.css" />
     <link rel="stylesheet" href="./../shinylive/shinylive.css" />
   </head>

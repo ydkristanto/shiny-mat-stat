@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
+    <meta name="description" content="Aplikasi berbasis web ini memiliki dua tujuan. Pertama, aplikasi ini menunjukkan frekuensi relatif atau peluang empiris kejadian yang melibatkan lempar undi dadu. Frekuensi relatif tersebut disajikan dalam diagram maupun tabel. Tujuan kedua, aplikasi ini mendemonstrasikan apa yang terjadi terhadap frekuensi relatif ketika banyak percobaan semakin besar. Frekuensi relatif tersebut semakin mendekati peluang teoretisnya ketika banyak percobaannya semakin besar.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-03-08">
+    <meta name="keywords" content="peluang, frekuensi relatif, peluang empiris, peluang teoretis, Hukum Bilangan Besar, dadu, probabilitas, eksperimen, percobaan, Shiny, dashboard, dasbor, RStudio, R, tidyverse, ggplot2, dplyr">
+    <title>Lempar Undi Dadu &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <script
       src="./../shinylive/load-shinylive-sw.js"
       type="module"
@@ -19,6 +24,35 @@
       const appRoot = document.getElementById("root");
       runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE1XQVDMNX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-RE1XQVDMNX');
+    </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lempar Undi Dadu – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/lempar-undi-dadu/" />
+    <meta property="og:description" content="Bagaimana nilai frekuensi relatif suatu kejadian ketika banyak percobaannya semakin besar? Ayo selidiki melalui aplikasi ini!" />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/03/simulasi-lempar-undi-dadu.png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Tangkapan layar aplikasi berbasis web Lempar Undi Dadu." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Lempar Undi Dadu – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/03/simulasi-lempar-undi-dadu.png" />
+    <meta name="twitter:image:alt" content="Tangkapan layar aplikasi berbasis web Lempar Undi Dadu." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../shinylive/style-resets.css" />
     <link rel="stylesheet" href="./../shinylive/shinylive.css" />
   </head>

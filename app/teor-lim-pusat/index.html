@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
+    <meta name="description" content="Tujuan aplikasi interaktif ini adalah untuk mendemonstrasikan Teorema Limit Pusat untuk distribusi sampling proporsi dan rerata satu populasi. Beberapa ide penting statistik ditunjukkan oleh aplikasi ini. Ide-ide penting tersebut antara lain adalah sebagai berikut. Jika ukuran sampelnya cukup besar, distribusi sampling proporsinya mendekati normal. Distribusi sampling proporsi tersebut memiliki rerata sama dengan proporsi populasinya dan simpangan bakunya sama dengan akar kuadrat dari hasil kali antara proporsi populasi dan satu dikurangi proporsi tersebut kemudian dibagi dengan ukuran sampel. Jika ukuran sampelnya cukup besar, distribusi sampling reratanya mendekati normal. Untuk sampel yang berukuran kecil, distribusi sampling reratanya mendekati normal jika populasi dari sampel tersebut berdistribusi normal. Distribusi sampling rerata tersebut memiliki rerata yang sama dengan rerata populasinya dan simpangan baku yang sama dengan simpangan baku populasi dibagi dengan akar kuadrat ukuran sampel.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-01-17">
+    <meta name="keywords" content="Statistika, Statistika Inferensial, statistik, parameter, populasi, sampel, proporsi, persentase, rerata, rata-rata, mean, distribusi sampling, Teorema Limit Pusat, Shiny, media pembelajaran, R, RStudio, tidyverse, ggplot2, dplyr, shinylive">
+    <title>Demonstrasi Teorema Limit Pusat &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <script
       src="./../shinylive/load-shinylive-sw.js"
       type="module"
@@ -19,6 +24,26 @@
       const appRoot = document.getElementById("root");
       runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
     </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Demonstrasi Teorema Limit Pusat – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/teor-lim-pusat/" />
+    <meta property="og:description" content="Aplikasi Shiny ini mendemonstrasikan Teorema Limit Pusat untuk distribusi sampling proporsi dan rerata." />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/dist-sampling-rerata.png" />
+    <meta property="og:image:width" content="1188" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:alt" content="Distribusi rerata dari 1000 sampel acak, masing-masing memuat 285 observasi dari sebuah populasi normal." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Demonstrasi Teorema Limit Pusat – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/dist-sampling-rerata.png" />
+    <meta name="twitter:image:alt" content="Distribusi rerata dari 1000 sampel acak, masing-masing memuat 285 observasi dari sebuah populasi normal." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../shinylive/style-resets.css" />
     <link rel="stylesheet" href="./../shinylive/shinylive.css" />
   </head>

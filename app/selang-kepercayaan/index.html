@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
+    <meta name="description" content="Aplikasi interaktif ini dimaksudkan untuk mendemonstrasikan cakupan selang-selang kepercayaan proporsi dan rerata terhadap parameter populasinya. Beberapa ide penting statistik yang ditunjukkan oleh aplikasi ini antara lain: (a) semakin besar tingkat kepercayaannya, semakin besar persentase selang kepercayaan yang mencakup parameter populasinya; (b) semakin besar tingkat kepercayaannya, pias galatnya juga semakin besar; (c) untuk rerata, ketika ukuran sampelnya kecil dan populasinya tidak berdistribusi normal, hubungan antara tingkat kepercayaan dan persentase pencakupan semakin tidak menentu.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-01-19">
+    <meta name="keywords" content="Statistika, Statistika Inferensial, statistik, parameter, populasi, sampel, proporsi, persentase, rerata, rata-rata, mean, selang kepercayaan, selang estimasi, Shiny, media pembelajaran, R, RStudio, tidyverse, ggplot2, dplyr">
+    <title>Cakupan Selang Kepercayaan &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <script
       src="./../shinylive/load-shinylive-sw.js"
       type="module"
@@ -19,6 +24,26 @@
       const appRoot = document.getElementById("root");
       runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
     </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cakupan Selang Kepercayaan – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/selang-kepercayaan/" />
+    <meta property="og:description" content="Aplikasi Shiny ini mendemonstrasikan cakupan selang kepercayaan proporsi dan rerata terhadap parameter populasinya." />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/cakupan-selang-proporsi.png" />
+    <meta property="og:image:width" content="1158" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:image:alt" content="Cakupan selang kepercayaan 95% dari 500 sampel yang dipilih secara acak." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Cakupan Selang Kepercayaan – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/01/cakupan-selang-proporsi.png" />
+    <meta name="twitter:image:alt" content="Cakupan selang kepercayaan 95% dari 500 sampel yang dipilih secara acak." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../shinylive/style-resets.css" />
     <link rel="stylesheet" href="./../shinylive/shinylive.css" />
   </head>
