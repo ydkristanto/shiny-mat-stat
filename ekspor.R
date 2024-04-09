@@ -49,6 +49,11 @@ shinylive::export(
   destdir = "app",
   subdir = "uji-t-welch"
 )
+shinylive::export(
+  appdir = "app-vid-analytics",
+  destdir = "app",
+  subdir = "vid-analytics"
+)
 
 # Menguji aplikasi dalam folder "docs".
 httpuv::runStaticServer("app")
