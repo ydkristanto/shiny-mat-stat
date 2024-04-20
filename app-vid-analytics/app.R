@@ -394,10 +394,12 @@ server <- function(input, output, session) {
             theme_minimal() +
             theme(
               axis.text.y = element_blank(),
-              axis.title.y = element_blank()
+              plot.title = element_text(face = "bold", hjust = .5)
             ) +
             labs(
-              x = "Day"
+              x = "Day",
+              y = "Video",
+              title = "Daily Video Views Over Time"
             )
           plot <- ggplotly(p)
         } else if (input$chart == "Line") {
@@ -405,8 +407,11 @@ server <- function(input, output, session) {
             basic_stats_dat(), x = ~day, y = ~views, color = ~vid_title,
             type = "scatter", mode = "lines"
           )%>% 
-            layout(xaxis = list(title = "Day"), 
-                   yaxis = list(title = "Views"))
+            layout(
+              xaxis = list(title = "Day"), 
+              yaxis = list(title = "Views"),
+              title = "<b>Daily Video Views Over Time</b>"
+            )
         }
       } else if(input$period == "Monthly") {
         data <- basic_stats_dat() %>% 
@@ -427,10 +432,12 @@ server <- function(input, output, session) {
             theme_minimal() +
             theme(
               axis.text.y = element_blank(),
-              axis.title.y = element_blank()
+              plot.title = element_text(face = "bold", hjust = .5)
             ) +
             labs(
-              x = "Month"
+              x = "Month",
+              y = "Video",
+              title = "Monthly Video Views Over Time"
             )
           plot <- ggplotly(p)
         } else if (input$chart == "Line") {
@@ -439,28 +446,53 @@ server <- function(input, output, session) {
             type = "scatter", mode = "lines"
           ) %>% 
             layout(xaxis = list(title = "Month"), 
-                   yaxis = list(title = "Views"))
+                   yaxis = list(title = "Views"),
+                   title = "<b>Monthly Video Views Over Time</b>")
         }
       }
     } else if (input$stat == "Retention") {
       if (input$time_type == "Real (minutes)") {
         p <- retention_dat() %>% 
           ggplot(aes(x = elapsed_time_mins, y = audience_watch_ratio)) +
-          geom_point(alpha = .2) +
+          geom_point(
+            aes(color = vid_title), alpha = .1
+          ) +
           geom_smooth() +
           xlim(0, 20) +
           ylim(0, 1.6) +
           theme_minimal() +
-          labs(x = "Elapsed time (minutes)", y = "Audience watch ratio")
+          theme(
+            plot.title = element_text(face = "bold", hjust = .5),
+            legend.position = "none"
+          ) +
+          labs(
+            x = "Elapsed time (minutes)",
+            y = "Audience watch ratio",
+            title = "Video User Retention Over Elapsed Time (Minutes)"
+          )
         plot <- ggplotly(p)
       } else if (input$time_type == "Ratio") {
         p <- retention_dat() %>% 
           ggplot(aes(x = elapsed_time_ratio, y = audience_watch_ratio)) +
-          geom_point(alpha = .2) +
+          geom_point(
+            aes(color = vid_title), alpha = .1
+          ) +
           geom_smooth() +
           theme_minimal() +
-          labs(x = "Elapsed time (ratio)", y = "Audience watch ratio")
-        plot <- ggplotly(p)
+          theme(
+            plot.title = element_text(face = "bold", hjust = .5),
+            legend.position = "none"
+          ) +
+          labs(x = "Elapsed time (ratio)", y = "Audience watch ratio",
+               title = "Video User Retention Over Elapsed Time (Ratio)")
+        plot <- ggplotly(
+          p,
+          tooltip = c(
+            "vid_title",
+            "elapsed_time_ratio",
+            "audience_watch_ratio"
+          )
+        )
       }
       
     }

@@ -55,5 +55,11 @@ shinylive::export(
   subdir = "vid-analytics"
 )
 
+shinylive::export(
+  appdir = "app-bib-math-educ",
+  destdir = "app",
+  subdir = "bib-math-educ"
+)
+
 # Menguji aplikasi dalam folder "docs".
 httpuv::runStaticServer("app")
