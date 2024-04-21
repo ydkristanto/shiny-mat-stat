@@ -61,5 +61,11 @@ shinylive::export(
   subdir = "bib-math-educ"
 )
 
+shinylive::export(
+  appdir = "reprex",
+  destdir = "app",
+  subdir = "reprex"
+)
+
 # Menguji aplikasi dalam folder "docs".
 httpuv::runStaticServer("app")
