@@ -67,5 +67,11 @@ shinylive::export(
   subdir = "reprex"
 )
 
+shinylive::export(
+  appdir = "apl-kalkulator-matahari",
+  destdir = "app",
+  subdir = "kalkulator-matahari"
+)
+
 # Menguji aplikasi dalam folder "docs".
 httpuv::runStaticServer("app")
