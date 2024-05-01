@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shiny App</title>
+    <meta name="description" content="Dasbor ini bertujuan untuk memvisualisasikan data tentang matahari. Misalnya, Anda dapat melihat dan membandingkan lamanya hari antara dua kota setiap waktunya. Anda juga dapat melihat kapan matahari terbit dan terbenam setiap waktunya.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-04-23">
+    <meta name="keywords" content="trigonometri, sinus, kosinus, matahari, kalkulator matahari, lama hari, terbit, terbenam, fajar, senja, matematika, diagram pencar, Shiny, shinylive, dashboard, RStudio, R, tidyverse, ggplot2, dplyr, plotly">
+    <title>Kalkulator Matahari &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <script
       src="./../shinylive/load-shinylive-sw.js"
       type="module"
@@ -19,6 +24,35 @@
       const appRoot = document.getElementById("root");
       runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W23K5VNNV3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-W23K5VNNV3');
+    </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kalkulator Matahari – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/kalkulator-matahari/" />
+    <meta property="og:description" content="Eksplorasi perbedaan lamanya hari, waktu matahari terbit dan tenggelam antara kota yang satu dengan lainnya!" />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/04/kalkulator-matahari.png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Diagram pencar yang menunjukkan perbedaan lamanya hari setiap waktunya di Kota Denpasar dan Perth." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Kalkulator Matahari – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/04/kalkulator-matahari.png" />
+    <meta name="twitter:image:alt" content="Diagram pencar yang menunjukkan perbedaan lamanya hari setiap waktunya di Kota Denpasar dan Perth." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./../shinylive/style-resets.css" />
     <link rel="stylesheet" href="./../shinylive/shinylive.css" />
   </head>
