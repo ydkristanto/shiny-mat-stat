@@ -101,8 +101,10 @@ ui <- page_navbar(
         #### Tentang ----
         nav_panel(
           title = "Tentang",
-          p("Aplikasi berbasis web ini bertujuan untuk memodelkan hubungan antara banyak spesies dan luas wilayah di Kepulauan Raja Ampat. Melalui aplikasi ini, Anda dapat juga dapat membandingkan beberapa model, seperti model linear, eksponensial, dan logistik."),
-          p("Bagi pendidik, aplikasi ini dapat digunakan untuk memfasilitasi peserta didik bermatematika. Misalnya, permasalahan berikut dapat diajukan kepada peserta didik: Model manakah yang menurutmu paling baik? Mengapa? Dalam menjawab permasalahan tersebut, peserta didik dapat berdiskusi dengan teman-teman dalam kelompok.")
+          p("Aplikasi berbasis web ini bertujuan untuk memodelkan hubungan antara banyak spesies dan luas wilayah (", tags$i("species–area relationship,"), " SAR) di Kepulauan Raja Ampat. Melalui aplikasi ini, Anda dapat menggunakan model-model matematis yang beragam, seperti model linear, eksponensial, dan logistik. Selain itu, Anda juga dapat membandingkan model-model tersebut untuk mendapatkan model yang paling baik."),
+          p("Bagi pendidik, aplikasi ini dapat digunakan untuk memfasilitasi peserta didik bermatematika. Misalnya, permasalahan berikut dapat diajukan kepada peserta didik."),
+          tags$blockquote("Model manakah yang menurutmu paling baik? Bagaimana strategimu dalam membandingkan model-model tersebut?"),
+          p("Dalam menjawab permasalahan tersebut, peserta didik dapat berdiskusi dengan teman-temannya dalam kelompok.")
         ),
         nav_panel(
           #### Alat ----
@@ -127,7 +129,7 @@ ui <- page_navbar(
         ),
         card_body(
           p("Aplikasi ini menggunakan data yang disediakan oleh Schrader dkk. Data tersebut dipublikasikan di dalam ", a(tags$i("Biodiversity Data Journal."), href = "https://doi.org/10.3897/BDJ.8.e55275", target = "_blank")),
-          p("Data tersebut memuat banyak variabel. Variabel-variabel yang penting dalam aplikasi ini adalah tingkat analisis, luas pulau, dan banyak spesies. Tingkat analisisnya terbagi menjadi tiga, yaitu pulau, transek, dan plot. Transek merupakan wilayah persegi panjang di dalam pulau sedangkan plot merupakan wilayah persegi sebagai bagian dari transek. Untuk lebih jelasnya, silakan baca ", a("Schrader dkk. (2019).", href = "https://doi.org/10.1111/ecog.04512", target = "_blank"))
+          p("Data tersebut memuat banyak variabel. Variabel-variabel yang penting dalam aplikasi ini adalah tingkat analisis, luas pulau, dan banyak spesies. Tingkat analisisnya terbagi menjadi tiga, yaitu pulau, transek, dan plot (subtransek). Transek merupakan wilayah persegi panjang di dalam pulau sedangkan plot merupakan wilayah persegi sebagai bagian dari transek. Untuk lebih jelasnya, silakan baca ", a("Schrader dkk. (2019).", href = "https://doi.org/10.1111/ecog.04512", target = "_blank"))
         )
       )
     )
