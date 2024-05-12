@@ -2,6 +2,7 @@
 library(shiny)
 library(bslib)
 library(tidyverse)
+library(plotly)
 options(shiny.mathjax.url = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js")
 
 # Tautan ----
@@ -295,7 +296,7 @@ ui <- page_navbar(
               placement = c("auto")
             )
           ),
-          plotOutput(
+          plotlyOutput(
             "grafik_data_dep",
             fill = TRUE
           )
@@ -387,7 +388,7 @@ ui <- page_navbar(
               placement = c("auto")
             )
           ),
-          plotOutput(
+          plotlyOutput(
             "grafik_data",
             fill = TRUE
           )
@@ -826,7 +827,7 @@ server <- function(input, output, session) {
     width = "100%"
   )
   ### grafik_data_dep ----
-  output$grafik_data_dep <- renderPlot({
+  output$grafik_data_dep <- renderPlotly({
     x <- as.character(input$sumbu_x_dep)
     y <- as.character(input$sumbu_y_dep)
     warna <- as.character(input$warna_dep)
@@ -911,7 +912,8 @@ server <- function(input, output, session) {
         )
     }
 
-    plot_baru
+    ggplotly(plot_baru)
+    
   })
 
   ## Tabungan berjangka ----
@@ -1178,7 +1180,7 @@ server <- function(input, output, session) {
     width = "100%"
   )
   ### grafik_data ----
-  output$grafik_data <- renderPlot({
+  output$grafik_data <- renderPlotly({
     x <- as.character(input$sumbu_x)
     y <- as.character(input$sumbu_y)
     warna <- as.character(input$warna)
@@ -1236,7 +1238,8 @@ server <- function(input, output, session) {
         )
     }
 
-    plot_baru
+    ggplotly(plot_baru)
+    
   })
 }
 

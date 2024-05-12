@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aplikasi berbasis web ini bertujuan untuk memodelkan hubungan antara banyak spesies dan luas wilayah di Kepulauan Raja Ampat. Melalui aplikasi ini, Anda dapat juga dapat membandingkan beberapa model, seperti model linear, eksponensial, dan logistik.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-05-12">
+    <meta name="keywords" content="pemodelan, model matematika, fungsi, linear, eksponen, logaritma, fungsi rasional, logistik, Weibull, Raja Ampat, diagram pencar, Shiny, shinylive, dashboard, RStudio, R, tidyverse, ggplot2, dplyr, plotly">
+    <title>Jelajah Kepulauan Raja Ampat &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <script
+      src="./../shinylive/load-shinylive-sw.js"
+      type="module"
+    ></script>
+    <script type="module">
+      import { runApp } from "./../shinylive/shinylive.js";
+      const response = await fetch("./app.json");
+      if (!response.ok) {
+        throw new Error("HTTP error loading app.json: " + response.status);
+      }
+      const appFiles = await response.json();
+
+      const appRoot = document.getElementById("root");
+      runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF7NFYP5Y7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-PF7NFYP5Y7');
+    </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jelajah Kepulauan Raja Ampat – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/jelajah-raja-ampat/" />
+    <meta property="og:description" content="Ayo jelajahi keanekaragaman hayati di Kepulauan Raja Ampat!" />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/05/jelajah-raja-ampat.png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Pemodelan hubungan antara spesies dan luas wilayah di Kepulauan Raja Ampat." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Jelajah Kepulauan Raja Ampat – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/05/jelajah-raja-ampat.png" />
+    <meta name="twitter:image:alt" content="Pemodelan hubungan antara spesies dan luas wilayah di Kepulauan Raja Ampat." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./../shinylive/style-resets.css" />
+    <link rel="stylesheet" href="./../shinylive/shinylive.css" />
+  </head>
+  <body>
+    <div style="height: 100vh; width: 100vw" id="root"></div>
+  </body>
+</html>

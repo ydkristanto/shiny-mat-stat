@@ -14,11 +14,13 @@ shinylive::export(
   destdir = "app",
   subdir = "hukum-bil-besar"
 )
+
 shinylive::export(
   appdir = "apl-idn-pisa-2022",
   destdir = "app",
   subdir = "idn-pisa-2022"
 )
+
 shinylive::export(
   appdir = "apl-lempar-undi-dadu",
   destdir = "app",
@@ -71,6 +73,12 @@ shinylive::export(
   appdir = "apl-kalkulator-matahari",
   destdir = "app",
   subdir = "kalkulator-matahari"
+)
+
+shinylive::export(
+  appdir = "apl-jelajah-raja-ampat",
+  destdir = "app",
+  subdir = "jelajah-raja-ampat"
 )
 
 # Menguji aplikasi dalam folder "docs".

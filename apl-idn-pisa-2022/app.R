@@ -2152,10 +2152,19 @@ server <- function(input, output) {
       filter(literasi == jenis_literasi)
     # Plot
     plot <- data %>%
-      ggplot(aes(x = tahun, y = rerata, color = negara)) +
+      ggplot(aes(x = tahun, y = rerata, color = negara)) + 
+      geom_line(
+        aes(group = negara),
+        stat = "smooth",
+        method = "lm",
+        formula = y ~ poly(x, degree = 2),
+        color = "black",
+        alpha = .4,
+        linewidth = 1.5
+      ) + 
       geom_line(aes(group = negara),
         linewidth = 2, alpha = .6
-      ) +
+      ) + 
       geom_point(size = 3) +
       scale_color_brewer(palette = "Dark2") +
       ylim(y_lim[1], y_lim[2]) +
