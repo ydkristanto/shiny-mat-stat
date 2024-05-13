@@ -182,7 +182,7 @@ server <- function(input, output, session) {
     '
     <figure>
       <img src = "https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/05/pulau-transek-subtransek-01.png" width = "80%" alt = "Transek dan substransek dalam pulau.">
-      <figcaption style = "font-size:0.85em;">Ilustrasi pulau, transek, dan subtransek. Gambar diadaptasi dari Schrader, Moeljono, Tambing, Sattler, & Kreft (<a href = "https://doi.org/10.3897/BDJ.8.e55275">2020</a>) / <a href = "https://creativecommons.org/licenses/by/4.0/deed.id">CC BY 4.0 DEED</a> </figcaption>
+      <figcaption style = "font-size:0.75em;">Ilustrasi pulau, transek (10 m × 2 m), dan subtransek (2 m × 2 m). Banyaknya transek dalam sebuah pulau tergantung dari luas pulau tersebut. Pulau yang lebih besar memuat lebih banyak transek. [Gambar diadaptasi dari Schrader, Moeljono, Tambing, Sattler, & Kreft (<a href = "https://doi.org/10.3897/BDJ.8.e55275.figure1" target = "_blank">2020</a>) / <a href = "https://creativecommons.org/licenses/by/4.0/deed.id" target = "_blank">CC BY 4.0 DEED</a>] </figcaption>
     </figure>
     '
   })
