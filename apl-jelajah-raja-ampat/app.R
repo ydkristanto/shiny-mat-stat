@@ -554,15 +554,15 @@ server <- function(input, output, session) {
             x = luas, y = banyak_spesies,
             xend = luas, yend = pred_banyak_spesies
           ),
-          color = "#8971E1",
-          linewidth = .3,
-          alpha = .75
+          linewidth = .4,
+          alpha = .75,
+          color = "#8971E1"
         ),
         geom_point(
           aes(
             text = sprintf(
               "<b>Luas:</b> %s<br><b>Banyak Spesies:</b> %s",
-              luas, banyak_spesies
+              round(luas, 2), round(banyak_spesies, 2)
             )
           ),
           color = "#E32D91",
