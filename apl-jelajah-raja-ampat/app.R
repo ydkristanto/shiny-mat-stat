@@ -146,10 +146,10 @@ Tabel dalam tab Data memperlihatkan detail data yang ditampilkan pada diagram pe
         ),
         card_body(
           p("Aplikasi ini menggunakan data yang disediakan oleh Schrader dkk. Data tersebut dipublikasikan di dalam ", a(tags$i("Biodiversity Data Journal."), href = "https://doi.org/10.3897/BDJ.8.e55275", target = "_blank")),
-          p("Data tersebut memuat banyak variabel. Variabel-variabel yang penting dalam aplikasi ini adalah tingkat analisis, luas pulau, dan banyak spesies tumbuhan berkayu. Tingkat analisisnya terbagi menjadi tiga, yaitu pulau, transek, dan subtransek. Transek merupakan wilayah persegi panjang di dalam pulau sedangkan subtransek merupakan wilayah persegi sebagai bagian dari transek. Untuk lebih jelasnya, perhatikan gambar berikut ", a("(Schrader dkk., 2019).", href = "https://doi.org/10.1111/ecog.04512", target = "_blank")),
+          p("Data tersebut memuat banyak variabel. Variabel-variabel yang penting dalam aplikasi ini adalah tingkat analisis, luas pulau, dan banyak spesies tumbuhan berkayu. Tingkat analisisnya terbagi menjadi tiga, yaitu pulau, transek, dan subtransek. Transek merupakan wilayah persegi panjang di dalam pulau sedangkan subtransek merupakan wilayah persegi sebagai bagian dari transek. Untuk lebih jelasnya, perhatikan gambar berikut."),
           div(
             htmlOutput("keterangan_transek"),
-            style = "text-align:center;"
+            style = "text-align:center; text-size:0.8em;"
           )
         )
       )
@@ -179,7 +179,12 @@ server <- function(input, output, session) {
   
   ## keterangan_transek ----
   output$keterangan_transek <- renderText({
-    '<img src = "https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/05/pulau-transek-subtransek-01.png" width = "80%" alt = "Transek dan substransek dalam pulau.">'
+    '
+    <figure>
+      <img src = "https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/05/pulau-transek-subtransek-01.png" width = "80%" alt = "Transek dan substransek dalam pulau.">
+      <figcaption style = "font-size:0.85em;">Ilustrasi pulau, transek, dan subtransek. Gambar diadaptasi dari Schrader, Moeljono, Tambing, Sattler, & Kreft (<a href = "https://doi.org/10.3897/BDJ.8.e55275">2020</a>) / <a href = "https://creativecommons.org/licenses/by/4.0/deed.id">CC BY 4.0 DEED</a> </figcaption>
+    </figure>
+    '
   })
   
   ## Sidebar galat ----
