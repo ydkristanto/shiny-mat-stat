@@ -687,7 +687,7 @@ server <- function(input, output, session) {
       
       if(input$transform) {
         withMathJax(
-          sprintf("$$y = \\frac{{%.03f + %.03f x}}{{1 + \\left( %.03f \\log x \\right)}}$$", c, z, d)
+          sprintf("$$y = \\frac{{%.03f + %.03f \\log x}}{{1 + \\left( %.03f \\log x \\right)}}$$", c, z, d)
         )
       } else {
         withMathJax(
@@ -715,7 +715,7 @@ server <- function(input, output, session) {
       
       if(input$transform) {
         withMathJax(
-          sprintf("$$y = %.03f\\left( {1 - {e^{\\left( { - %.03f{\\log x^{%.03f}}} \\right)}}} \\right)$$", d, z, f)
+          sprintf("$$y = %.03f\\left( {1 - {e^{\\left( { - %.03f{\\left( \\log x \\right)^{%.03f}}} \\right)}}} \\right)$$", d, z, f)
         )
       } else {
         withMathJax(
