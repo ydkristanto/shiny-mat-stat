@@ -120,7 +120,7 @@ Dalam menjawab permasalahan tersebut, peserta didik dapat berdiskusi dengan tema
 
 Diagram pencar tersebut memperlihatkan hubungan antara luas wilayah dan banyaknya spesies tumbuhan berkayu. Tampilannya tergantung dari tingkat analisis yang dipilih, yaitu pulau, transek, dan subtransek. Ketika pulau yang dipilih, variabel `Banyak Spesies` menyatakan total banyaknya spesies tumbuhan berkayu dalam pulau tersebut. Ketika transek yang dipilih, variabel tersebut menyatakan rata-rata banyaknya spesies di setiap transek dalam sebuah pulau. Hal ini juga sama ketika subtransek yang terpilih.
 
-Tabel dalam tab Data memperlihatkan detail data yang ditampilkan pada diagram pencar. Data dalam tabel tersebut terdiri dari lima variabel, yaitu `ID Pulau`, `Luas`, `Banyak Spesies`, `Banyak Spesies (Pred. Model)`, dan `Galat`. Tiga variabel pertama cukup jelas. Variabel `Banyak Spesies (Pred. Model)` menyatakan (rata-rata) banyaknya spesies yang diperoleh dengan menginputkan `Luas` ke dalam model yang dihasilkan. Variabel `Galat` merupakan selisih antara `Banyak Spesies` dan `Banyak Spesies (Pred. Model)`."
+Tabel dalam tab Data memperlihatkan detail data yang ditampilkan pada diagram pencar. Data dalam tabel tersebut terdiri dari lima variabel, yaitu `ID Pulau`, `Luas` (atau transformasinya, yaitu `log(Luas)`), `Banyak Spesies`, `Banyak Spesies (Pred. Model)`, dan `Galat`. Tiga variabel pertama cukup jelas. Variabel `Banyak Spesies (Pred. Model)` menyatakan (rata-rata) banyaknya spesies yang diperoleh dengan menginputkan `Luas` ke dalam model yang dihasilkan. Variabel `Galat` merupakan selisih antara `Banyak Spesies` dan `Banyak Spesies (Pred. Model)`."
           )
         ),
         nav_panel(
@@ -609,18 +609,32 @@ server <- function(input, output, session) {
     pred <- fitted.values(model())
     residu <- residuals(model())
     
-    dat() %>% 
+    data <- dat() %>% 
       mutate(
         prediksi_banyak_spesies = round(pred, 2),
         galat = round(residu, 3)
-      ) %>% 
-      rename(
+      )
+    if(input$transform) {
+      data <- data %>% 
+        rename(
         `ID Pulau` = ID_pulau,
-        `Luas` = luas,
+        `log(Luas)` = luas,
         `Banyak Spesies` = banyak_spesies,
         `Banyak Spesies (Pred. Model)` = prediksi_banyak_spesies,
         `Galat` = galat
       )
+    } else {
+      data <- data %>% 
+        rename(
+          `ID Pulau` = ID_pulau,
+          `Luas` = luas,
+          `Banyak Spesies` = banyak_spesies,
+          `Banyak Spesies (Pred. Model)` = prediksi_banyak_spesies,
+          `Galat` = galat
+        )
+    }
+    
+    data
     
   })
   
