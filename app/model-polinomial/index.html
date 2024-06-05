@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dasbor Shiny ini menggunakan fungsi polinomial untuk mengeksplorasi dan memodelkan data di sektor pangan (prevalensi ketidakcukupan konsumsi pangan dan produksi gabah), pariwisata (wisatawan Candi Borobudur), ekonomi (harga per unit pembangunan rumah), dan musik.">
+    <meta name="author" content="Yosep Dwi Kristanto">
+    <meta name="dcterms.date" content="2024-06-01">
+    <meta name="keywords" content="pemodelan, model matematika, fungsi, polinomial, suku banyak, ketahanan pangan, produksi gabah, musik, diagram pencar, Shiny, shinylive, dashboard, RStudio, R, tidyverse, ggplot2, dplyr, plotly">
+    <title>Pemodelan Fungsi Polinomial &#8211; Yosep Dwi Kristanto</title>
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <script
+      src="./../shinylive/load-shinylive-sw.js"
+      type="module"
+    ></script>
+    <script type="module">
+      import { runApp } from "./../shinylive/shinylive.js";
+      const response = await fetch("./app.json");
+      if (!response.ok) {
+        throw new Error("HTTP error loading app.json: " + response.status);
+      }
+      const appFiles = await response.json();
+
+      const appRoot = document.getElementById("root");
+      runApp(appRoot, "viewer", {startFiles: appFiles}, "r");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74XBT4M0GD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-74XBT4M0GD');
+    </script>
+    <!-- Shiny Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pemodelan Fungsi Polinomial – Yosep Dwi Kristanto" />
+    <meta property="og:url" content="https://people.usd.ac.id/~ydkristanto/app/model-polinomial/" />
+    <meta property="og:description" content="Temukan bagaimana fungsi polinomial digunakan untuk memahami sektor pangan, pariwisata, ekonomi, dan musik!" />
+    <meta property="og:site_name" content="Yosep Dwi Kristanto" />
+    <meta property="og:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/06/fitur-model-polinomial.png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Pemodelan hubungan antara usia lagu dan rerata rating." />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:creator" content="@yosepdwik" />
+    <meta name="twitter:text:title" content="Pemodelan Fungsi Polinomial – Yosep Dwi Kristanto" />
+    <meta name="twitter:image" content="https://people.usd.ac.id/~ydkristanto/wp-content/uploads/2024/06/fitur-model-polinomial.png" />
+    <meta name="twitter:image:alt" content="Pemodelan hubungan antara usia lagu dan rerata rating." />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- End Shiny Open Graph Tags -->
+    <link rel="icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://people.usd.ac.id/~ydkristanto/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./../shinylive/style-resets.css" />
+    <link rel="stylesheet" href="./../shinylive/shinylive.css" />
+  </head>
+  <body>
+    <div style="height: 100vh; width: 100vw" id="root"></div>
+  </body>
+</html>

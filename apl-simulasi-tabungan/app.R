@@ -232,6 +232,7 @@ ui <- page_navbar(
         fill = TRUE
       ),
       navset_card_underline(
+        title = "Penyajian Data",
         nav_panel(
           "Tabel",
           tableOutput("tabel_data_dep")
@@ -470,6 +471,10 @@ ui <- page_navbar(
         gtag('config', 'G-XWLYNEVE4J');
       </script>
     ")
+  ),
+  footer = div(
+    "© 2024 Yosep Dwi Kristanto",
+    style = "font-size: 0.8em; text-align: right;"
   )
 )
 
@@ -835,27 +840,18 @@ server <- function(input, output, session) {
 
     plot_awal <- tabel_data_dep() %>%
       ggplot(aes(.data[[x]], .data[[y]])) +
-      theme_bw(base_size = 16) +
-      labs(
-        title = paste0("Hubungan Antara ", x, " dan ", y)
-      ) +
-      theme(
-        plot.title = element_text(
-          face = "bold",
-          hjust = .5
-        )
-      )
+      theme_minimal()
     plot_baru <- if (warna == "-" & facet == "-") {
       plot_awal +
         geom_point(
           color = "#386cb0",
-          size = 5
+          size = 2
         )
     } else if (warna != "-" & warna != "Penghitungan Bunga" & facet == "-") {
       plot_awal +
         geom_point(
           aes(color = .data[[warna]]),
-          size = 5
+          size = 2
         ) +
         scale_color_viridis_b() +
         theme(
@@ -865,7 +861,7 @@ server <- function(input, output, session) {
       plot_awal +
         geom_point(
           aes(color = .data[[warna]]),
-          size = 5
+          size = 2
         ) +
         scale_color_viridis_d() +
         theme(
@@ -875,7 +871,7 @@ server <- function(input, output, session) {
       plot_awal +
         geom_point(
           color = "#386cb0",
-          size = 5
+          size = 2
         ) +
         facet_grid(
           ~ factor(.data[[facet]])
@@ -886,7 +882,7 @@ server <- function(input, output, session) {
           aes(
             color = .data[[warna]]
           ),
-          size = 5
+          size = 2
         ) +
         scale_color_viridis_d() +
         facet_grid(
@@ -901,7 +897,7 @@ server <- function(input, output, session) {
           aes(
             color = .data[[warna]]
           ),
-          size = 5
+          size = 2
         ) +
         scale_color_viridis_b() +
         facet_grid(

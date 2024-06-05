@@ -81,5 +81,11 @@ shinylive::export(
   subdir = "jelajah-raja-ampat"
 )
 
+shinylive::export(
+  appdir = "apl-model-polinomial",
+  destdir = "app",
+  subdir = "model-polinomial"
+)
+
 # Menguji aplikasi dalam folder "docs".
 httpuv::runStaticServer("app")
